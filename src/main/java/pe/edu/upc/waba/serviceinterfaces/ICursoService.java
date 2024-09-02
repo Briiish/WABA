@@ -16,5 +16,6 @@ public interface ICursoService {
 
     public void delete(int id);
 
+    
     public List<Curso> buscarCurso(String curso);
 }

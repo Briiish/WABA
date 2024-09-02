@@ -14,6 +14,7 @@ public class CursoServiceImplement implements ICursoService {
     @Autowired
     private ICursoRepository cR;
 
+
     @Override
     public List<Curso> list() {
         return cR.findAll();

@@ -16,6 +16,7 @@ public class CursoDTO {
         return descriCur;
     }
 
+
     public void setDescriCur(String descriCur) {
         this.descriCur = descriCur;
     }

@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/cursos")
 public class CursoController {
+
     @Autowired
     private ICursoService cS;
 

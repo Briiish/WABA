@@ -16,6 +16,7 @@ public class Curso {
     public Curso(){
     }
 
+
     public Curso(int idCur, String descriCur){
         this.idCur = idCur;
         this.descriCur = descriCur;
