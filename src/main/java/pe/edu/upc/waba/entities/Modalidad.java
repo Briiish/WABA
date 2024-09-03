@@ -8,7 +8,7 @@ public class Modalidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idMo;
-    @Column(name = "descriMo", length = 70, nullable = false)
+    @Column(name = "descriMo", length = 25, nullable = false)
     private String descriMo;
 
     public Modalidad() {
