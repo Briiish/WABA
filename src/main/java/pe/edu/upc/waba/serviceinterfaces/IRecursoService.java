@@ -7,5 +7,4 @@ import java.util.List;
 public interface IRecursoService {
     public List<Recurso> list();
     public void insert(Recurso rc);
-    List<String[]> hrxp();
 }

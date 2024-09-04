@@ -4,9 +4,11 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.waba.dtos.ProfesorDTO;
+import pe.edu.upc.waba.dtos.QuerysDTO.ProfesorQ1DTO;
 import pe.edu.upc.waba.entities.Profesor;
 import pe.edu.upc.waba.serviceinterfaces.IProfesorService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,5 +49,19 @@ public class ProfesorController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") Integer id){
         pS.delete(id);
+    }
+
+    @GetMapping("/hrxp")
+    public List<ProfesorQ1DTO> hrxp(){
+        List<String[]> filaLista = pS.hrxp();
+        List<ProfesorQ1DTO> dtoLista = new ArrayList<>();
+
+        for (String[] columna : filaLista){
+            ProfesorQ1DTO dto = new ProfesorQ1DTO();
+            dto.setNombreProfesor(columna[0]);
+            dto.setHorasReservadas(Double.parseDouble(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
     }
 }

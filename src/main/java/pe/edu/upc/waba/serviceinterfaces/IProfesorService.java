@@ -10,5 +10,6 @@ public interface IProfesorService {
     public Profesor ListId(int id);
     public void update(Profesor a);
     public void delete(int id);
+    List<String[]> hrxp();
 
 }

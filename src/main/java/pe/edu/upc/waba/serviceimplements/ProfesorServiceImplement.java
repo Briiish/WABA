@@ -37,4 +37,9 @@ public class ProfesorServiceImplement implements IProfesorService {
         pR.deleteById(id);
     }
 
+    @Override
+    public List<String[]> hrxp() {
+        return pR.hrxp();
+    }
+
 }

@@ -1,6 +1,6 @@
 package pe.edu.upc.waba.dtos.QuerysDTO;
 
-public class RecursoQ1DTO {
+public class ProfesorQ1DTO {
     private String nombreProfesor;
     private double horasReservadas;
 
