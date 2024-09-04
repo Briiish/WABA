@@ -5,11 +5,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 public class RecursoDTO {
-    private  int idRecu;
+    private int idRecu;
     private String cicloRecu;
 
-    private  Curso cu;
-    private  User us;
+    private Curso cu;
+    private Users us;
 
     public int getIdRecu() {
         return idRecu;
@@ -35,11 +35,11 @@ public class RecursoDTO {
         this.cu = cu;
     }
 
-    public User getUs() {
+    public Users getUs() {
         return us;
     }
 
-    public void setUs(User us) {
+    public void setUs(Users us) {
         this.us = us;
     }
 }

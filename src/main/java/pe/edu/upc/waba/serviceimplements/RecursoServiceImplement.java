@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class RecursoServiceImplement implements IRecursoService {
+
     @Autowired
     private IRecursoRepository rR;
 
@@ -24,7 +25,8 @@ public class RecursoServiceImplement implements IRecursoService {
     }
 
     @Override
-    public List<Recurso> buscarRecursosUserCodigo(String user, String codigo) {
-        return rR.buscarRecursosUserCodigo(user,codigo);
+    public List<String[]> hrxp() {
+        return rR.hrxp();
     }
+
 }

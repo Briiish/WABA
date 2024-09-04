@@ -7,6 +7,5 @@ import java.util.List;
 public interface IRecursoService {
     public List<Recurso> list();
     public void insert(Recurso rc);
-
-    public List<Recurso> buscarRecursosUserCodigo(String user,String codigo);
+    List<String[]> hrxp();
 }

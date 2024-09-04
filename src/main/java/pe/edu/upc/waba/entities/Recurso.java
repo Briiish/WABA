@@ -2,6 +2,10 @@ package pe.edu.upc.waba.entities;
 
 import jakarta.persistence.*;
 
+import java.awt.*;
+
+@Entity
+@Table(name = "Recurso")
 public class Recurso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,12 +17,12 @@ public class Recurso {
     private  Curso cu;
     @ManyToOne
     @JoinColumn(name = "User_id")
-    private  User us;
+    private  Users us;
 
     public Recurso() {
     }
 
-    public Recurso(int idRecu, String cicloRecu, Curso cu, User us) {
+    public Recurso(int idRecu, String cicloRecu, Curso cu, Users us) {
         this.idRecu = idRecu;
         this.cicloRecu = cicloRecu;
         this.cu = cu;
@@ -49,11 +53,11 @@ public class Recurso {
         this.cu = cu;
     }
 
-    public User getUs() {
+    public Users getUs() {
         return us;
     }
 
-    public void setUs(User us) {
+    public void setUs(Users us) {
         this.us = us;
     }
 }
