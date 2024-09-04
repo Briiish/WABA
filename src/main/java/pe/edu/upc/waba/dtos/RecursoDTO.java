@@ -3,6 +3,9 @@ package pe.edu.upc.waba.dtos;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import pe.edu.upc.waba.entities.Curso;
+import pe.edu.upc.waba.entities.Users;
+
 
 public class RecursoDTO {
     private int idRecu;

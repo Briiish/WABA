@@ -24,9 +24,6 @@ public class RecursoServiceImplement implements IRecursoService {
         rR.save(rc);
     }
 
-    @Override
-    public List<String[]> hrxp() {
-        return rR.hrxp();
-    }
+
 
 }
