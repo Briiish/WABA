@@ -8,6 +8,7 @@ public class UserDTO {
     private String username;
     private String password;
     private Boolean enabled;
+    private String codigoUs;
     private LocalDate fregUs;
     private String nombreUs;
     private String apellidoUs;
@@ -44,6 +45,14 @@ public class UserDTO {
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public String getCodigoUs() {
+        return codigoUs;
+    }
+
+    public void setCodigoUs(String codigoUs) {
+        this.codigoUs = codigoUs;
     }
 
     public LocalDate getFregUs() {
