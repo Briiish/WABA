@@ -18,12 +18,24 @@ public class Rol implements Serializable {
 
     private String rol;
 
-    public int getId() {
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private Users user;
+
+    public Users getUser() {
+        return user;
+    }
+
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public int getIdRol() {
         return idRol;
     }
 
-    public void setId(int id) {
-        this.idRol = id;
+    public void setIdRol(int idRol) {
+        this.idRol = idRol;
     }
 
     public String getRol() {
