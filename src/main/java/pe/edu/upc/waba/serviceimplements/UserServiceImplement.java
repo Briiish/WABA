@@ -7,6 +7,7 @@ import pe.edu.upc.waba.entities.Users;
 import pe.edu.upc.waba.repositories.IUserRepository;
 import pe.edu.upc.waba.serviceinterfaces.IUserService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -34,5 +35,15 @@ public class UserServiceImplement implements IUserService {
     @Override
     public Users listarId(int id) {
         return uR.findById(id).orElse(new Users());
+    }
+
+    @Override
+    public List<String[]> hrxa() {
+        return uR.hrxa();
+    }
+
+    @Override
+    public int axrt(LocalDate startDate, LocalDate endDate) {
+        return uR.axrt(startDate, endDate);
     }
 }
