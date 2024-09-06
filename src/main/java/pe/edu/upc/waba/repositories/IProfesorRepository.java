@@ -9,10 +9,12 @@ import java.util.List;
 
 @Repository
 public interface IProfesorRepository extends JpaRepository<Profesor,Integer> {
-    @Query(value = "SELECT p.nombre_profesor, ROUND(SUM(EXTRACT(EPOCH FROM (p.hora_final_reserva - p.hora_inicio_reserva)) / 3600), 1) AS horas_reservadas " +
-            "FROM reserva r " +
-            "INNER JOIN profesor p ON r.profesorid = p.id_profesor " +
-            "GROUP BY p.id_profesor " +
+    @Query(value = "SELECT p.nombre_profe, \n" +
+            "ROUND(SUM(EXTRACT(EPOCH FROM (r.h_fin_res - r.h_inicio_res/ 3600), 1)\n" +
+            "AS horas_reservadas\n" +
+            "FROM reserva r \n" +
+            "INNER JOIN profesor p ON r.id_profe = p.id_profe \n" +
+            "GROUP BY p.id_profe \n" +
             "ORDER BY horas_reservadas DESC ", nativeQuery = true)
     List<String[]> hrxp();
 }
