@@ -1,9 +1,12 @@
 package pe.edu.upc.waba.controllers;
 
 
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.waba.dtos.QuerysDTO.Q3hrxaDTO;
 import pe.edu.upc.waba.dtos.QuerysDTO.Q4axrtDTO;
@@ -21,11 +24,17 @@ import java.util.stream.Collectors;
 public class UserController {
     @Autowired
     private IUserService uS;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    //MODIFICADO  CON SECURITY
 
     @PostMapping
     public void registrar(@RequestBody UserDTO dto) {
         ModelMapper m = new ModelMapper();
         Users u = m.map(dto, Users.class);
+        String encodedPassword = passwordEncoder.encode(u.getPassword());
+        u.setPassword(encodedPassword);
         uS.insert(u);
     }
 
