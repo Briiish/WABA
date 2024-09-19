@@ -5,18 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.waba.dtos.ComentarioDTO;
 
-<<<<<<< Updated upstream
-=======
-import pe.edu.upc.waba.dtos.QuerysDTO.Q2cpxprofDTO;
->>>>>>> Stashed changes
+
 import pe.edu.upc.waba.entities.Comentario;
 
 import pe.edu.upc.waba.serviceinterfaces.IComentarioService;
 
-<<<<<<< Updated upstream
-=======
-import java.util.ArrayList;
->>>>>>> Stashed changes
+
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,10 +54,6 @@ public class ComentarioController {
     public void eliminar(@PathVariable("id")Integer id){ cS.delete(id);}
 
 
-<<<<<<< Updated upstream
-}
-=======
-
 
 }
->>>>>>> Stashed changes
+

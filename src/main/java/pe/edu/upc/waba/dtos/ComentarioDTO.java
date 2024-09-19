@@ -1,11 +1,10 @@
 package pe.edu.upc.waba.dtos;
 
-<<<<<<< Updated upstream
-=======
+
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
->>>>>>> Stashed changes
+
 import pe.edu.upc.waba.entities.Profesor;
 
 public class ComentarioDTO {
@@ -46,7 +45,4 @@ public class ComentarioDTO {
         Pro = pro;
     }
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes

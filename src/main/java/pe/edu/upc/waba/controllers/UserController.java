@@ -1,6 +1,7 @@
 package pe.edu.upc.waba.controllers;
 
 
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -20,7 +21,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
-//@PreAuthorize("hasAuthority('ADMIN' and 'USER')")
+
 public class UserController {
     @Autowired
     private IUserService uS;
