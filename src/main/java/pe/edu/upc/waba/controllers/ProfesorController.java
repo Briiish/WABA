@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.waba.dtos.ProfesorDTO;
 import pe.edu.upc.waba.dtos.QuerysDTO.ProfesorQ1DTO;
+import pe.edu.upc.waba.dtos.QuerysDTO.Q2cpxprofDTO;
 import pe.edu.upc.waba.entities.Profesor;
 import pe.edu.upc.waba.serviceinterfaces.IProfesorService;
 
@@ -64,4 +65,19 @@ public class ProfesorController {
         }
         return dtoLista;
     }
+
+    @GetMapping("/cpxp")
+    public List<Q2cpxprofDTO> cpxp(){
+        List<String[]> filaLista = pS.cpxp();
+        List<Q2cpxprofDTO> dtoLista = new ArrayList<>();
+
+        for (String[] columna : filaLista){
+            Q2cpxprofDTO dto = new Q2cpxprofDTO();
+            dto.setNameProfesor(columna[0]);
+            dto.setCantidadPuntos(Double.parseDouble(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
+
 }

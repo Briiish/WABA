@@ -42,4 +42,10 @@ public class ProfesorServiceImplement implements IProfesorService {
         return pR.hrxp();
     }
 
+    @Override
+    public List<String[]> cpxp() {
+        return pR.cpxp();
+    }
+
+
 }
