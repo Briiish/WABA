@@ -1,8 +1,10 @@
 package pe.edu.upc.waba.dtos;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+
 import pe.edu.upc.waba.entities.Profesor;
 
 public class ComentarioDTO {
@@ -43,3 +45,4 @@ public class ComentarioDTO {
         Pro = pro;
     }
 }
+

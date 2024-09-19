@@ -1,7 +1,9 @@
 package pe.edu.upc.waba.serviceinterfaces;
 
 import pe.edu.upc.waba.entities.Comentario;
+
 import pe.edu.upc.waba.entities.Modalidad;
+
 
 import java.util.List;
 
@@ -15,4 +17,5 @@ public interface IComentarioService {
     public void update(Comentario c);
 
     public void delete(int id);
+
 }

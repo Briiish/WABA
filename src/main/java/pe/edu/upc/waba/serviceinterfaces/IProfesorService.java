@@ -11,5 +11,6 @@ public interface IProfesorService {
     public void update(Profesor a);
     public void delete(int id);
     List<String[]> hrxp();
+    List<String[]> cpxp();
 
 }
