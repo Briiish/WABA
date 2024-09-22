@@ -3,7 +3,7 @@ package pe.edu.upc.waba.dtos;
 public class TasesoriaDTO {
 
     private int idAs;
-    private int tipoAs;
+    private String tipoAs;
 
     public int getIdAs() {
         return idAs;
@@ -13,11 +13,11 @@ public class TasesoriaDTO {
         this.idAs = idAs;
     }
 
-    public int getTipoAs() {
+    public String getTipoAs() {
         return tipoAs;
     }
 
-    public void setTipoAs(int tipoAs) {
+    public void setTipoAs(String tipoAs) {
         this.tipoAs = tipoAs;
     }
 }

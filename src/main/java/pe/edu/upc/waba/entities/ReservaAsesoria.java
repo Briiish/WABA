@@ -34,9 +34,9 @@ public class ReservaAsesoria {
     @JoinColumn(name = "id", nullable = false)
     private Users Us;
 
-//    @ManyToOne
-//    @JoinColumn(name = "Tasesoria_idAs", nullable = false)
-//    private Asesoria tasesoria;
+    @ManyToOne
+    @JoinColumn(name = "isAs", nullable = false)
+    private Tasesoria Tase;
 
     @ManyToOne
     @JoinColumn(name = "idMo", nullable = false)
@@ -46,18 +46,16 @@ public class ReservaAsesoria {
     public ReservaAsesoria() {
     }
 
-
-    public ReservaAsesoria(int idRes, LocalDate fechaRes, LocalTime hInicioRes, LocalTime hFinRes, String viaRes,
-                           Profesor Pro, Users Us, Modalidad Mo) {
+    public ReservaAsesoria(int idRes, LocalDate fechaRes, LocalTime hInicioRes, LocalTime hFinRes, String viaRes, Profesor pro, Users us, Tasesoria tase, Modalidad mo) {
         this.idRes = idRes;
         this.fechaRes = fechaRes;
         this.hInicioRes = hInicioRes;
         this.hFinRes = hFinRes;
         this.viaRes = viaRes;
-        this.Pro = Pro;
-        this.Us = Us;
-//        this.tasesoria = tasesoria;
-        this.Mo = Mo;
+        Pro = pro;
+        Us = us;
+        Tase = tase;
+        Mo = mo;
     }
 
     public int getIdRes() {
@@ -114,6 +112,14 @@ public class ReservaAsesoria {
 
     public void setUs(Users us) {
         Us = us;
+    }
+
+    public Tasesoria getTase() {
+        return Tase;
+    }
+
+    public void setTase(Tasesoria tase) {
+        Tase = tase;
     }
 
     public Modalidad getMo() {

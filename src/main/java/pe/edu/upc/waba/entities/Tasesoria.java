@@ -9,13 +9,14 @@ public class Tasesoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAs;
+
     @Column(name = "tipoAs", nullable = false)
-    private int tipoAs;
+    private String tipoAs;
 
     public Tasesoria() {
     }
 
-    public Tasesoria(int idAs, int tipoAs) {
+    public Tasesoria(int idAs, String tipoAs) {
         this.idAs = idAs;
         this.tipoAs = tipoAs;
     }
@@ -28,11 +29,11 @@ public class Tasesoria {
         this.idAs = idAs;
     }
 
-    public int getTipoAs() {
+    public String getTipoAs() {
         return tipoAs;
     }
 
-    public void setTipoAs(int tipoAs) {
+    public void setTipoAs(String tipoAs) {
         this.tipoAs = tipoAs;
     }
 }

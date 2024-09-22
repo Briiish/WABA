@@ -9,7 +9,7 @@ import pe.edu.upc.waba.entities.Profesor;
 
 public class ComentarioDTO {
     private int idCo;
-    private float puntosCo;
+    private double puntosCo;
     private String resenaCo;
     private Profesor Pro;
 
@@ -21,11 +21,11 @@ public class ComentarioDTO {
         this.idCo = idCo;
     }
 
-    public float getPuntosCo() {
+    public double getPuntosCo() {
         return puntosCo;
     }
 
-    public void setPuntosCo(float puntosCo) {
+    public void setPuntosCo(double puntosCo) {
         this.puntosCo = puntosCo;
     }
 
