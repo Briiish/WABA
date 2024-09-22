@@ -74,7 +74,7 @@ public class ProfesorController {
         for (String[] columna : filaLista){
             Q2cpxprofDTO dto = new Q2cpxprofDTO();
             dto.setNameProfesor(columna[0]);
-            dto.setPromedioPuntuacion(Double.parseDouble(columna[1]));
+            dto.setCantidadPuntos(Double.parseDouble(columna[1]));
             dtoLista.add(dto);
         }
         return dtoLista;
