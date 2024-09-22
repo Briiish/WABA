@@ -2,7 +2,7 @@ package pe.edu.upc.waba.dtos.QuerysDTO;
 
 public class Q2cpxprofDTO {
     private String nameProfesor;
-    private double cantidadPuntos;
+    private double promedioPuntuacion;
 
     public String getNameProfesor() {
         return nameProfesor;
@@ -12,11 +12,11 @@ public class Q2cpxprofDTO {
         this.nameProfesor = nameProfesor;
     }
 
-    public double getCantidadPuntos() {
-        return cantidadPuntos;
+    public double getPromedioPuntuacion() {
+        return promedioPuntuacion;
     }
 
-    public void setCantidadPuntos(double cantidadPuntos) {
-        this.cantidadPuntos = cantidadPuntos;
+    public void setPromedioPuntuacion(double promedioPuntuacion) {
+        this.promedioPuntuacion = promedioPuntuacion;
     }
 }
