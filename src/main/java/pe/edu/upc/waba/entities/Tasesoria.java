@@ -9,7 +9,6 @@ public class Tasesoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAs;
-
     @Column(name = "tipoAs", nullable = false)
     private int tipoAs;
 
