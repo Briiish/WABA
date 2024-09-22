@@ -10,7 +10,7 @@ public class Comentario {
     private int idCo;
 
     @Column(name = "puntosCo", nullable = false)
-    private double puntosCo;
+    private float puntosCo;
 
     @Column(name = "resenaCo", length = 50, nullable = false)
     private String resenaCo;
@@ -22,7 +22,7 @@ public class Comentario {
     public Comentario() {
     }
 
-    public Comentario(int idCo, double puntosCo, String resenaCo, Profesor pro) {
+    public Comentario(int idCo, float puntosCo, String resenaCo, Profesor pro) {
         this.idCo = idCo;
         this.puntosCo = puntosCo;
         this.resenaCo = resenaCo;
@@ -37,7 +37,7 @@ public class Comentario {
         this.idCo = idCo;
     }
 
-    public double getPuntosCo() {
+    public float getPuntosCo() {
         return puntosCo;
     }
 

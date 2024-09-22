@@ -15,7 +15,7 @@ public interface IProfesorRepository extends JpaRepository<Profesor,Integer> {
             "GROUP BY p.nombre_profe", nativeQuery = true)
     List<String[]> hrxp();
 
-    @Query(value = "SELECT p.nombre_profe, SUM(c.puntos_co) AS Puntuacion\n" +
+    @Query(value = "SELECT p.nombre_profe, AVG(c.puntos_co) AS promedioPuntuacion\n" +
             "FROM comentario c\n" +
             "INNER JOIN profesor p ON c.id_profe = p.id_profe\n" +
             "GROUP BY p.nombre_profe", nativeQuery = true)
