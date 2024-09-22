@@ -16,10 +16,9 @@ public interface IProfesorRepository extends JpaRepository<Profesor,Integer> {
     List<String[]> hrxp();
 
     @Query(value = "SELECT p.nombre_Profe AS nameProfesor,\n" +
-            "AVG(c.puntos_Co) AS cantidadPuntos\n" +
+            "COUNT (c.puntos_Co) AS cantidadPuntos\n" +
             "FROM comentario c \n" +
             "INNER JOIN profesor p ON c.id_Profe = p.id_Profe\n" +
-            "GROUP BY p.nombre_Profe\n" +
-            "HAVING AVG(c.puntos_co) BETWEEN 0 AND 10", nativeQuery = true)
+            "GROUP BY p.nombre_Profe", nativeQuery = true)
     List<String[]> cpxp();
 }
