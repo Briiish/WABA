@@ -2,6 +2,7 @@ package pe.edu.upc.waba.dtos;
 
 import pe.edu.upc.waba.entities.Modalidad;
 import pe.edu.upc.waba.entities.Profesor;
+import pe.edu.upc.waba.entities.Tasesoria;
 import pe.edu.upc.waba.entities.Users;
 
 import java.time.LocalDate;
@@ -19,6 +20,16 @@ public class ReservaAsesoriaDTO {
     private Profesor Pro;
     private Users Us;
     private Modalidad Mo;
+    private Tasesoria Tase;
+
+
+    public Tasesoria getTase() {
+        return Tase;
+    }
+
+    public void setTase(Tasesoria tase) {
+        Tase = tase;
+    }
 
     public int getIdRes() {
         return idRes;
