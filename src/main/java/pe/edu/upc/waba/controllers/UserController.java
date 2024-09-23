@@ -2,6 +2,7 @@ package pe.edu.upc.waba.controllers;
 
 
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -21,7 +22,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuarios")
-
+@SecurityRequirement(name = "javainuseapi")
 public class UserController {
     @Autowired
     private IUserService uS;
