@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+//@PreAutorize("hasAuthority('ADMIN') or hasAuthority('PROGRAMMER')")
+@PreAuthorize("hasAuthority('ADMIN')")
 @RequestMapping("/usuarios")
 @SecurityRequirement(name = "javainuseapi")
 public class UserController {
