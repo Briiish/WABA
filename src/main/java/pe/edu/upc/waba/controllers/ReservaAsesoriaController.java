@@ -36,6 +36,13 @@ public class ReservaAsesoriaController {
         raS.insert(rar);
     }
 
+    @GetMapping("/{id}")
+    public ReservaAsesoriaDTO listarId(@PathVariable("id")Integer id){
+        ModelMapper m= new ModelMapper();
+        ReservaAsesoriaDTO dto=m.map(raS.listId(id), ReservaAsesoriaDTO.class);
+        return dto;
+    }
+    
     @PutMapping
     public void modificar(@RequestBody ReservaAsesoriaDTO dto){
         ModelMapper m=new ModelMapper();
